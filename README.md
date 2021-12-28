@@ -8,11 +8,11 @@ In this project, you will be executing SQL commands with at least one subquery.
 
 Run `npm install` to install the dependencies.
 
-Execute the file __build-db.sql__ in the terminal to build the database, 
+Execute the file __build-db.sql__ in the terminal to build the database,
 and populate it with seed data.
 
 ```shell
-sqlite3 db.sqlite ".read build-db.sql"
+sqlite3 example.db ".read build-db.sql"
 ```
 
 In the _sql-practice_ folder, create a file called _subqueries.sql_ to hold your
@@ -38,8 +38,8 @@ The tables are structured as follows...
 | name   | TEXT    |                                 |
 | cat_id | INTEGER | FOREIGN KEY REFERENCES cats(id) |
 
-Run a few queries using the command line (CLI) to see the `cats` and `toys` 
-provided in the seed data. 
+Run a few queries using the command line (CLI) to see the `cats` and `toys`
+provided in the seed data.
 
 Use a `JOIN` query to explore their relationship.
 
@@ -57,15 +57,18 @@ Give Garfield a new toy named "Pepperoni" using a subquery for Garfield's id.
 
 Verify the insertion worked using one of the queries above.
 
-> Tip #1: If you place the `INSERT` between the `JOIN` query and the subquery,
-> you'll "automatically" have before-and-after testing.
+<details>
+<summary>Tip #1</summary>
+If you place the <code>INSERT</code> between the <code>JOIN</code> query and the subquery, you'll "automatically" have before-and-after testing.
+</details>
 
-> Tip #2: You can write additional text to the screen using `SELECT` to return
-> a constant. (Research this online if you're not sure how to do it.)
+<details>
+<summary>Tip #2</summary>
+You can write additional text to the screen using <code>SELECT</code> to return a constant. (Research this online if you're not sure how to do it.)
+</details>
 
-> Tip #3: You can put multiple `.read` commands in the same shell command for 
-> faster testing (e.g. rebuild from seed data followed by subqueries).
-
-```shell
-sqlite3 db.sqlite ".read build-db.sql" ".read subqueries.sql"
-```
+<details>
+<summary>Tip #3</summary>
+You can put multiple <code>.read</code> commands in the same shell command for faster testing (e.g. rebuild from seed data followed by subqueries).
+<pre><code class="language-shell">sqlite3 example.db ".read build-db.sql" ".read subqueries.sql"</code></pre>
+</details>
