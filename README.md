@@ -1,6 +1,6 @@
 # Practice: SQL Subqueries
 
-In this project, you will be executing SQL commands with at least one subquery.
+In this practice, you will be executing SQL commands with at least one subquery.
 
 ## Set up
 
